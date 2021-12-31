@@ -36,37 +36,91 @@ Example of useMount
 The code below...
 
 ``` js
+import { useMount } from '@hashiprobr/react-use-mount-and-update';
+
+export default function MyComponent() {
+    /* ... */
+
+    useMount(() => {
+        console.log('hello world');
+    }); // second argument is not necessary
+
+    /* ... */
+}
 ```
 
 ...is equivalent to the code below.
 
 ``` js
+import { useEffect } from 'react';
+
+export default function MyComponent() {
+    /* ... */
+
+    useEffect(() => {
+        console.log('hello world');
+    }, []); // second argument is an empty array
+
+    /* ... */
+}
 ```
 
 
 Example of useUpdate
 --------------------
 
-The code below throws an error.
-
-``` js
-```
-
-The code below also throws an error.
-
-``` js
-```
-
 The code below...
 
 ``` js
+import { useUpdate } from '@hashiprobr/react-use-mount-and-update';
+
+export default function MyComponent() {
+    /* ... */
+
+    useUpdate(() => {
+        console.log('hello world');
+    }, [a, b]); // second argument is a non-empty array
+
+    /* ... */
+}
 ```
 
 ...is almost equivalent to the code below...
 
 ``` js
+import { useEffect } from 'react';
+
+export default function MyComponent() {
+    /* ... */
+
+    useEffect(() => {
+        console.log('hello world');
+    }, [a, b]); // second argument is a non-empty array
+
+    /* ... */
+}
 ```
 
-...but in the first one the effect will occur regardless if the component is
-mounted or not, while in the second one the effect will occur only if the
+...but in the second one the effect will occur regardless if the component is
+mounted or not, while in the first one the effect will occur only if the
 component is mounted.
+
+Also, all codes below throw an error.
+
+``` js
+useUpdate(() => {
+    console.log('hello world');
+}); // second argument must exist
+```
+
+``` js
+useUpdate(() => {
+    console.log('hello world');
+}, '[a, b]'); // second argument must be an array
+```
+
+``` js
+useUpdate(() => {
+    console.log('hello world');
+}, []); // second argument must be non-empty
+```
