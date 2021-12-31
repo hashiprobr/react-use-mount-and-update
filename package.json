@@ -1,6 +1,6 @@
 {
   "name": "@hashiprobr/react-use-mount-and-update",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Hooks for separating different responsibilities of effects",
   "keywords": [
     "JavaScript",

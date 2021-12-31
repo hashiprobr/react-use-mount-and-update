@@ -101,9 +101,9 @@ export default function MyComponent() {
 }
 ```
 
-...but in the second one the effect will occur regardless if the component is
-mounted or not, while in the first one the effect will occur only if the
-component is mounted.
+...but in the first one the effect will occur only if the component is mounted,
+while in the second one the effect will occur regardless if the component is
+mounted or not.
 
 Also, all codes below throw an error.
 
