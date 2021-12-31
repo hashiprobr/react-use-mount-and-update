@@ -1,7 +1,7 @@
 {
   "name": "@hashiprobr/react-use-mount-and-update",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "React Hooks for separating different responsibilities of effects",
   "keywords": [
     "JavaScript",
     "React",
