@@ -22,11 +22,29 @@ semantic distinction, reducing dependency mistakes, and avoiding memory leaks.
   effect does not occur if the component is not mounted.
 
 
+Peer dependencies
+-----------------
+
+``` json
+{
+    "react": "^17.0.1"
+}
+```
+
+
 Install
 -------
 
+With npm:
+
 ```
 npm install @hashiprobr/react-use-mount-and-update
+```
+
+With yarn:
+
+```
+yarn add @hashiprobr/react-use-mount-and-update
 ```
 
 
